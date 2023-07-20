@@ -22,15 +22,16 @@ const app = createApp({
             });
         },
         // function to delete todo item
-        deleteTask(task) {
-            const data = {'task': this.newTask};
-
-            // preparing confing
+        deleteTask(task) { 
+            // Prepare the data
+            const data = { task: task }; 
+        
+            // Prepare the config
             const config = {
-                headers: {'Content-Type': 'multipart/form-data'}
+                headers: { 'Content-Type': 'multipart/form-data' }
             }
-            axios
-                .delete('http://localhost:8888/php-todo-list-json/api/tasks/',data, config)
+        
+            axios.delete(`http://localhost:8888/php-todo-list-json/api/tasks/`, data, config)
                 .then(() => {
                     this.tasks = this.tasks.filter((item) => item !== task);
                 })

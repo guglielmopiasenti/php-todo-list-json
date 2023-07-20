@@ -14,7 +14,7 @@ const app = createApp({
 
             // preparing confing
             const config = {
-                headers: {'Content-Type': ''}
+                headers: {'Content-Type': 'multipart/form-data'}
             }
             axios.post('http://localhost:8888/php-todo-list-json/api/tasks/', data, config)
             .then(res => {

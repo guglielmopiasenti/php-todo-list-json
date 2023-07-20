@@ -13,15 +13,21 @@ const app = createApp({
             const data = {'task': this.newTask};
 
             // preparing confing
+            const config = {
+                headers: {'Content-Type': ''}
+            }
             axios.post('http://localhost:8888/php-todo-list-json/api/tasks/', data, config)
-            .then()
+            .then(res => {
+                this.tasks = res.data;
+            });
         }
     },
     created(){
         axios.get('http://localhost:8888/php-todo-list-json/api/tasks/')
-        .then((res => {
-            this.tasks = res.data
-        }))
+        .then(res => {
+            this.tasks = res.data;
+            this.newTask = '';    
+        })
     }
 })
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/clear-todos-2021-01-10.png" />
     <title>Todolist</title>
     <!-- Bootstrap -->
     <link
@@ -29,7 +29,7 @@
         style="width: 50rem"
       >
         <div class="d-flex align-items-center">
-          <img id="icon" src="img/Todo_list_App_Icon-removebg.png" alt="" />
+          <img id="icon" class="rounded-2 " src="img/clear-todos-2021-01-10.png" alt="" />
           <h1 class="display-1 py-2 text-white text-center">TodoList</h1>
         </div>
         <ul class="list-group">
@@ -55,7 +55,7 @@
           <li class="li-bottom list-unstyled"></li>
           <!-- Input field and Add button for new todos -->
           <div class="input-group py-3">
-            <form @submit.prevent="addTask">
+            <form class="d-flex w-100 gap-2 " @submit.prevent="addTask">
                 <input
                   v-model.trim="newTask"
                   type="text"

@@ -1,12 +1,13 @@
 body {
-    background-image: url("img/abstract-lines-minimal-art-4k-m2-1920x1080.jpg");
+    background-image: url("img/minimal2.webp");
+    background-size: cover;
 }
 .btn-success {
-    background-color: #6610f2 !important;
-    border-color: #6610f2 !important;
+    background-color: #FB1F41 !important;
+    border-color: #FB1F41 !important;
 }
 .todo-card {
-    background-color: rgba(255, 255, 255, .15) !important;
+    background-color: rgba(255, 255, 255, .05) !important;
     backdrop-filter: blur(5px);
 }
 li {
@@ -14,16 +15,17 @@ li {
     
 }
 #icon {
-    height: 100px;
+    height: 70px;
+    margin-right: 30px;
 }
 .li-bottom {
     border-radius: 0 0 10px 10px !important;
-    background-color: rgba(102, 16, 242, 0.8) !important;
+    background-color: rgba(251, 31, 65, 0.8) !important;
     height: 15px
 }
 .btn-danger {
     border-radius: 50% !important;
     height: 29px;
-    background-color: rgba(102, 16, 242, 0.8) !important;
-    border-color: rgba(102, 16, 242, 0.8);
+    background-color: rgba(251, 31, 65, 0.8) !important;
+    border-color: rgba(251, 31, 65, 0.8);
 }

@@ -1,1 +1,6 @@
-["HTML", "CSS", "Responsive Design", "JavaScript", "PHP"]
+[
+    {"id": 1, "text": "HTML", "done": false},
+    {"id": 2, "text": "CSS", "done": false},
+    {"id": 3, "text": "Responsive Design", "done": false},
+    {"id": 4, "text": "JavaScript", "done": false}
+]

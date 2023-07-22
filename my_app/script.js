@@ -22,7 +22,7 @@ const app = createApp({
             });
         },
         // function to delete todo item
-        deleteTask(task) { 
+        deleteTask(taskId) { 
             // Prepare the data
             const data = { id: taskId }; 
         

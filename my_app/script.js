@@ -36,8 +36,18 @@ const app = createApp({
                     this.tasks = this.tasks.filter((item) => item !== task);
                 })
         },
-        toggleDone(task) {
-            task.done = !task.done;
+        toggleDone(taskId) {
+                 // preparing data
+                 const data = {id: taskId};
+
+                 // preparing confing
+                 const config = {
+                     headers: {'Content-Type': 'multipart/form-data'}
+                 }
+                 axios.post('http://localhost:8888/php-todo-list-json/api/tasks/toggle/', data, config)
+                 .then(res => {
+                     this.tasks = res.data;
+                 });
         },
     },
     created(){

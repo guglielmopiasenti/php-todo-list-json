@@ -36,13 +36,13 @@
           <!-- Displaying each todo item -->
           <li
             v-for="task in tasks"
-            :key="task"
+            :key="task.id"
             :class="{ 'text-decoration-line-through': task.done }"
             class="list-group-item d-flex align-items-center justify-content-between gap-3 shadow-lg"
             @click="toggleDone(task)"
             style="width: 35rem"
           >
-            {{ task }}
+            <span :class="{'text-decoration-line-through' : task.done }">{{ task.text }}</span>
             <button
               type="button"
               class="btn btn-sm btn-danger"

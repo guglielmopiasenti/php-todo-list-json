@@ -42,12 +42,12 @@
             @click="toggleDone(task)"
             style="width: 35rem"
           >
-            <span :class="{'text-decoration-line-through' : task.done }">{{ task.text }}</span>
+            <span @click="toggleDone(task.id)" :class="{'text-decoration-line-through' : task.done }" role="button">{{ task.text }}</span>
             <button
               type="button"
               class="btn btn-sm btn-danger"
               aria-label="Close"
-              @click="deleteTask(task)"
+              @click="deleteTask(task.id)"
             >
               X
             </button>

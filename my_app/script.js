@@ -24,17 +24,17 @@ const app = createApp({
         // function to delete todo item
         deleteTask(task) { 
             // Prepare the data
-            const data = { task: task }; 
+            const data = { id: taskId }; 
         
             // Prepare the config
             const config = {
                 headers: { 'Content-Type': 'multipart/form-data' }
             }
         
-            axios.delete(`http://localhost:8888/php-todo-list-json/api/tasks/`, data, config)
-                .then(() => {
-                    this.tasks = this.tasks.filter((item) => item !== task);
-                })
+            axios.post(`http://localhost:8888/php-todo-list-json/api/tasks/delete/`, data, config)
+                .then(res => {
+                    this.tasks = res.data;
+                });
         },
         toggleDone(taskId) {
                  // preparing data
